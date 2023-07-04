@@ -5,9 +5,8 @@ file(GLOB_RECURSE headers CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/imgui/*
 file(GLOB_RECURSE sources CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/imgui/*.cpp")
 
 add_library (imgui OBJECT
-	${IMGUI_SOURCES}
-	${IMGUI_PLATFORM_SOURCES}
-	${IMGUI_RENDERER_SOURCES}
+    ${sources}
+    ${headers}
 )
 
 target_include_directories (imgui PUBLIC
